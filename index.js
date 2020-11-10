@@ -12,4 +12,7 @@ client.on('message', (msg) =>{
     if(msg.content.toLowerCase().includes('meme')) {
         msg.channel.send('REVIEW');
     }
+    if(msg.content.toLowerCase().includes('rent')) {
+        msg.channel.send('oof');
+    }
 });
