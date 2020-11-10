@@ -12,7 +12,11 @@ client.on('message', (msg) =>{
     if(msg.content.toLowerCase().includes('meme')) {
         msg.channel.send('REVIEW');
     }
-    if(msg.content.toLowerCase().includes('rent')) {
-        msg.channel.send('oof');
+    if(msg.content.toLowerCase().includes('stop')) {
+        msg.channel.send('NO');
+    }
+    if(msg.content.toLowerCase().includes('cdate')) {
+        let today = new Date().toISOString().slice(0, 10)
+        msg.channel.send(today);
     }
 });
