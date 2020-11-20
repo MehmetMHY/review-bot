@@ -45,7 +45,6 @@ def pick(last_time, up, down):
         if upr in new_list:
             end = True
 
-
     new_list.append(upr)
     new_list.append(dhr)
 
@@ -89,7 +88,7 @@ async def on_message(message):
         response = "REVIEW"
         await message.channel.send(response)
     
-    if "test" in message.content.lower():
+    if "cleanlist" in message.content.lower():
         await message.channel.send(embed=clean_list())
 
 client.run(TOKEN)
