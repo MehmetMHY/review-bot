@@ -4,6 +4,7 @@ import discord
 from dotenv import load_dotenv
 import random
 import time
+from datetime import date
 
 def textFileSave(filename, data):
     with open(filename, 'w') as f:
@@ -36,17 +37,8 @@ def pick(last_time, up, down):
     return new_list
 
 def printFormat(data):
-    # labels = ["Kitchen1: ", "Kitchen2: ", "  UpBath: ", "DownBath: "]
-    # final = "TO-DO THIS WEEK \n "
-    # for i in range(len(data)):
-    #     indent = " \n"
-    #     if(i == len(data)-1):
-    #         indent = ""
-        
-    #     final = final + labels[i] + data[i] + indent
-    # return final
     embed = discord.Embed(title=f"__**TO-DO THIS WEEK**__", color=0x03f8fc)
-    embed.add_field(name=f'**11-20-2020**', value=f'> Kitchen1: {data[0]}\n> Kitchen2: {data[1]}\n>   UpBath: {data[2]}\n> DownBath: {data[3]}',inline=False)
+    embed.add_field(name=str(date.today()), value=f'> **Kitchen1:** {data[0]}\n> **Kitchen2:** {data[1]}\n>   **UpBath:** {data[2]}\n> **DownBath:** {data[3]}',inline=False)
     return embed
 
 def clean_list():
