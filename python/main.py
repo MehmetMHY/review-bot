@@ -83,6 +83,6 @@ async def on_message(message):
         await message.channel.send(response)
     
     if "test" in message.content.lower():
-        await message.channel.send(clean_list())
+        await message.channel.send(embed=clean_list())
 
 client.run(TOKEN)
