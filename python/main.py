@@ -2,6 +2,64 @@
 import os
 import discord
 from dotenv import load_dotenv
+import random
+import time
+
+def textFileSave(filename, data):
+    with open(filename, 'w') as f:
+        for item in data:
+            f.write("%s\n" % item)
+
+def loadFile(filename):
+    with open(filename) as f:
+        lines = f.read().splitlines()
+    return lines
+
+def pick(last_time, up, down):
+    kitchen = up.copy() + down.copy()
+    kitchen1, kitchen2, up_bath, down_bath = last_time
+
+    kitchen.remove(kitchen1)
+    kitchen.remove(kitchen2)
+
+    new_list = []
+    new_list.append(random.choice(kitchen))
+    kitchen.remove(new_list[0])
+    new_list.append(random.choice(kitchen))
+
+    up.remove(up_bath)
+    down.remove(down_bath)
+
+    new_list.append(random.choice(up))
+    new_list.append(random.choice(down))
+
+    return new_list
+
+def printFormat(data):
+    labels = ["Kitchen1: ", "Kitchen2: ", "  UpBath: ", "DownBath: "]
+    final = "TO-DO THIS WEEK \n "
+    for i in range(len(data)):
+        indent = " \n"
+        if(i == len(data)-1):
+            indent = ""
+        
+        final = final + labels[i] + data[i] + indent
+    return final
+
+def clean_list():
+    down_list = ['Linlee', 'Daphne', 'Will']                                
+    up_list = ['Lucas', 'Mehmet', 'Dylan']
+
+    # format: kitchen1, kitchen2, up_bath, down_bath
+    last_grouping = loadFile("last_people.txt")
+
+    new_people = pick(last_grouping, up_list, down_list)
+
+    message = printFormat(new_people)
+
+    textFileSave("last_people.txt", new_people)
+
+    return message
 
 load_dotenv()
 TOKEN = os.getenv('BOT_TOKEN')
@@ -19,6 +77,10 @@ async def on_message(message):
 
     if "meme" in message.content.lower():
         response = "REVIEW"
+        await message.channel.send(response)
+    
+    if "test" in message.content.lower():
+        response = clean_list()
         await message.channel.send(response)
 
 client.run(TOKEN)
