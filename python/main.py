@@ -52,7 +52,7 @@ def pick(last_time, up, down):
 
 def printFormat(data):
     embed = discord.Embed(title=f"__**TO-DO THIS WEEK**__", color=0x03f8fc)
-    embed.add_field(name=str(date.today()), value=f'> **Kitchen1:** {data[0]}\n> **Kitchen2:** {data[1]}\n>   **UpBath:** {data[2]}\n> **DownBath:** {data[3]}',inline=False)
+    embed.add_field(name=str(date.today()), value=f'> **Kitchen1:** {data[0]}\n> **Kitchen2:** {data[1]}\n> **UpBath:** {data[2]}\n> **DownBath:** {data[3]}',inline=False)
     return embed
 
 def clean_list():
