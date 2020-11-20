@@ -36,15 +36,18 @@ def pick(last_time, up, down):
     return new_list
 
 def printFormat(data):
-    labels = ["Kitchen1: ", "Kitchen2: ", "  UpBath: ", "DownBath: "]
-    final = "TO-DO THIS WEEK \n "
-    for i in range(len(data)):
-        indent = " \n"
-        if(i == len(data)-1):
-            indent = ""
+    # labels = ["Kitchen1: ", "Kitchen2: ", "  UpBath: ", "DownBath: "]
+    # final = "TO-DO THIS WEEK \n "
+    # for i in range(len(data)):
+    #     indent = " \n"
+    #     if(i == len(data)-1):
+    #         indent = ""
         
-        final = final + labels[i] + data[i] + indent
-    return final
+    #     final = final + labels[i] + data[i] + indent
+    # return final
+    embed = discord.Embed(title=f"__**TO-DO THIS WEEK**__", color=0x03f8fc)
+    embed.add_field(name=f'**11-20-2020**', value=f'> Kitchen1: {data[0]}\n> Kitchen2: {data[1]}\n>   UpBath: {data[2]}\n> DownBath: {data[3]}',inline=False)
+    return embed
 
 def clean_list():
     down_list = ['Linlee', 'Daphne', 'Will']                                
@@ -80,7 +83,6 @@ async def on_message(message):
         await message.channel.send(response)
     
     if "test" in message.content.lower():
-        response = clean_list()
-        await message.channel.send(response)
+        await message.channel.send(clean_list())
 
 client.run(TOKEN)
