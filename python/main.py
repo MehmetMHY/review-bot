@@ -31,8 +31,23 @@ def pick(last_time, up, down):
     up.remove(up_bath)
     down.remove(down_bath)
 
-    new_list.append(random.choice(up))
-    new_list.append(random.choice(down))
+    upr = ""
+    dnr = ""
+    end = True
+    while(end):
+        upr = random.choice(up)
+        end = False
+        if upr in new_list:
+            end = True
+        
+        dhr = random.choice(down)
+        end = False
+        if upr in new_list:
+            end = True
+
+
+    new_list.append(upr)
+    new_list.append(dhr)
 
     return new_list
 
