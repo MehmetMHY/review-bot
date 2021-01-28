@@ -5,6 +5,9 @@
 ## About:
 - A simple discord bot. A MEME REVIEWER bot.
 
+## Bot's Commands:
+- cleanlist : print list of who is cleaning
+
 ## Useful:
 - For javascript version, run ./javascript/index.js/
 - For python version, run ./python/main.py/
