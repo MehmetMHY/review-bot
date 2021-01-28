@@ -1,3 +1,6 @@
+# easy bash script for git adding, commit, and push
+#	run: bash easy_push.sh
+
 echo "Current Git-Status:"
 git status
 echo
@@ -13,6 +16,4 @@ echo ">Git Pushing!"
 read -p "[ENTER TO CONTINUE OR CTRL-C]" temp
 git push
 echo ">DONE!"
-
-
 
