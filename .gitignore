@@ -1,3 +1,4 @@
 ./javascript/.env/
 ./python/.env/
 ./javascript/node_modules/
+.DS_Store
