@@ -1,6 +1,6 @@
 # REVIEW_BOT
 
-![pewdiepie-i-miss-your-meme-review_o_7229771](https://user-images.githubusercontent.com/15916367/98624917-f63f9680-22cb-11eb-9392-42003e296135.jpg)
+![Untitled drawing](https://user-images.githubusercontent.com/15916367/106402871-f4780180-63e8-11eb-9e63-6fa1dc152741.png)
 
 ## About:
 - A simple discord bot. A MEME REVIEWER bot.
