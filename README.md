@@ -1,6 +1,6 @@
-# REVIEW_BOT
+# REVIEW-BOT
 
-![Untitled drawing](https://user-images.githubusercontent.com/15916367/106402871-f4780180-63e8-11eb-9e63-6fa1dc152741.png)
+![Alt text](./assets/logo.png)
 
 ## About:
 - A simple discord bot. A MEME REVIEWER bot.
