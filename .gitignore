@@ -154,4 +154,6 @@ dmypy.json
 ./javascript/.env/
 ./python/.env/
 ./javascript/node_modules/
+node_modules/
+bar_*.png
 
