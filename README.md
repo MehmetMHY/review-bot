@@ -5,9 +5,9 @@
 ## About:
 - A simple discord bot. A MEME REVIEWER bot.
 
-## Useful:
-- For javascript version, run ./javascript/index.js/
-- For python version, run ./python/main.py/
+## Usage:
+- You will need to put your bot token in a `.env` file. See `.env_example`.
+- To start the bot, run `npm start`.
 
 - Kill Running Node:
 	- command1: ps -e | grep node
